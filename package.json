@@ -11,7 +11,7 @@
     "test:unit": "vitest --environment jsdom --root src/",
     "build-only:client": "vite build --config src/client/vite.config.ts",
     "build-only:server": "vite build --config src/server/vite.config.ts",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "type-check": "vue-tsc --noEmit -p tsconfig.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "repository": {
