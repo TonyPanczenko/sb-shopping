@@ -11,6 +11,7 @@ export default defineConfig({
     }
   },
   root: fileURLToPath(new URL('./', import.meta.url)),
+  envDir: fileURLToPath(new URL('./', import.meta.url)),
   build: {
     manifest: true,
     outDir: fileURLToPath(new URL('../../dist/server', import.meta.url)),
