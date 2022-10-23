@@ -3,7 +3,9 @@
 </script>
 
 <template>
-	<button style="width: 100px; margin: 40px">Test</button>
+	<button style="width: 100px; margin: 40px">
+		Test
+	</button>
 </template>
 
 <style scoped lang="scss">
