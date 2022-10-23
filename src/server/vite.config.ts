@@ -1,25 +1,24 @@
 import { fileURLToPath, URL } from 'node:url';
 
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src/client', import.meta.url))
+      '@': fileURLToPath(new URL('./src/server', import.meta.url))
     }
   },
   root: fileURLToPath(new URL('./', import.meta.url)),
   build: {
     manifest: true,
-    outDir: fileURLToPath(new URL('../../dist/client', import.meta.url)),
-    assetsDir: 'assets',
+    outDir: fileURLToPath(new URL('../../dist/server', import.meta.url)),
+    assetsDir: './',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        'index': fileURLToPath(new URL('./index.html', import.meta.url))
+        'index': fileURLToPath(new URL('./index.ts', import.meta.url))
       }
     }
   }

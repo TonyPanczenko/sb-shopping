@@ -5,10 +5,6 @@ module.exports = {
   'env': {
     'browser': true,
   },
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'project': 'src/client/tsconfig.json'
-  },
   'extends': [
     'plugin:vue/vue3-strongly-recommended',
     '@vue/eslint-config-typescript/recommended'

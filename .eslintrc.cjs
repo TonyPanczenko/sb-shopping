@@ -6,13 +6,15 @@ module.exports = {
   'env': {
     'es2022': true
   },
+  // 'parser': '@typescript-eslint/parser',
   'parserOptions': {
+    // 'project': 'tsconfig.json',
     'sourceType': 'module',
   },
   'extends': [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    // 'plugin:@typescript-eslint/recommended-requiring-type-checking'
   ],
   'rules': {
     'indent': [
@@ -36,7 +38,7 @@ module.exports = {
     }
     ],
   },
-  'ignorePatterns': ['dist/*'],
+  'ignorePatterns': ['dist/*', '.eslintrc.cjs'],
   settings: {
     'import/resolver': {
       alias: {

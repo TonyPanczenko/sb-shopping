@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "build": "run-p build:client build:server",
+    "build:client": "run-p type-check build-only:client",
+    "build:server": "run-p type-check build-only:server",
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
-    "build-only": "vite build --config src/client/vite.config.ts",
+    "build-only:client": "vite build --config src/client/vite.config.ts",
+    "build-only:server": "vite build --config src/server/vite.config.ts",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
