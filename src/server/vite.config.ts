@@ -20,6 +20,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         'index': fileURLToPath(new URL('./index.ts', import.meta.url))
+      },
+      output: {
+        entryFileNames: 'index.js' 
       }
     }
   }
